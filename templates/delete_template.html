@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+
+            <br>
+
+            <form class="form" action="" method="POST">
+                {% csrf_token %}
+                <h3>Do you really want to delete "{{ object }}"?</h3>
+                <h3> ㅤ </h3>
+
+                <input class="btn btn--danger" type="submit" value="Delete" />
+                <a class="btn btn--primary" href="{% url 'account' %}">Cancel</a>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

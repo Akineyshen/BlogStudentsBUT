@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="editReview">
+    <div class="container">
+        <h2> ㅤ </h2>
+        <h2 class="editReview__title"><i class="fa-solid fa-pen-to-square"></i> Edit a comment</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn--danger">Save</button>
+            <!-- Добавляем кнопку Cancel -->
+            <a href="{% url 'article' review.article.slug %}" class="btn btn--primary">Cancel</a>
+            <h2> ㅤ </h2>
+        </form>
+    </div>
+</main>
+{% endblock %}

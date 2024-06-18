@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Views.py &#8212; WWW.BLOGBUT.PL  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'articles/views';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Forms.py" href="forms.html" />
+    <link rel="prev" title="Models.py" href="models.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">WWW.BLOGBUT.PL  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Articles</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="models.html">Models.py</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Views.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html">Forms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utils.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../users/index.html">Users</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/articles/views.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Views.py</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.article"><code class="docutils literal notranslate"><span class="pre">article()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.articles"><code class="docutils literal notranslate"><span class="pre">articles()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.articles_by_tag"><code class="docutils literal notranslate"><span class="pre">articles_by_tag()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.articles_main"><code class="docutils literal notranslate"><span class="pre">articles_main()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.createArticle"><code class="docutils literal notranslate"><span class="pre">createArticle()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.deleteArticle"><code class="docutils literal notranslate"><span class="pre">deleteArticle()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.delete_review"><code class="docutils literal notranslate"><span class="pre">delete_review()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.edit_review"><code class="docutils literal notranslate"><span class="pre">edit_review()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.generate_pdf"><code class="docutils literal notranslate"><span class="pre">generate_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.get_image_size"><code class="docutils literal notranslate"><span class="pre">get_image_size()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.link_callback"><code class="docutils literal notranslate"><span class="pre">link_callback()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.updateArticle"><code class="docutils literal notranslate"><span class="pre">updateArticle()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-articles.views">
+<span id="views-py"></span><h1>Views.py<a class="headerlink" href="#module-articles.views" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.article">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">article</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">article_slug</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.article" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying a single article, including handling private articles and comments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>article_slug</strong> (<em>str</em>) – The slug identifier for the article to be displayed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered article template or password form.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the article based on the provided slug or returns a 404 if not found.</p></li>
+<li><p>Fetches all tags associated with the article.</p></li>
+<li><p>Initializes a blank review form.</p></li>
+<li><dl class="simple">
+<dt>If the article is private and the session does not have authorization, it checks the password:</dt><dd><ol class="loweralpha simple">
+<li><p>If the password is correct, sets the session authorization and redirects to the article.</p></li>
+<li><p>If the password is incorrect or not provided, renders the password form.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>If a comment is posted, validates the form and saves the review, associating it with the article and the user.</p></li>
+<li><p>Renders the article with its details, tags, and the review form.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the templates includes:</dt><dd><ul class="simple">
+<li><p>article: The article object.</p></li>
+<li><p>form: The review form.</p></li>
+<li><p>tags: The tags associated with the article.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.articles">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">articles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#articles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.articles" title="Link to this definition">#</a></dt>
+<dd><p>Handles the main view for displaying articles with search and pagination functionality.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered ‘articles/articles_main.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves articles based on a search query using the searchArticles function.</p></li>
+<li><p>Paginates the retrieved articles using the paginateArticles function, displaying 12 articles per page.</p></li>
+<li><p>Prepares the context with the articles, search query, and custom pagination range.</p></li>
+<li><p>Renders the ‘articles/articles_main.html’ template with the context.</p></li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.articles_by_tag">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">articles_by_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_slug</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#articles_by_tag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.articles_by_tag" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying articles filtered by a specific tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>tag_slug</strong> (<em>str</em>) – The slug identifier for the tag to filter articles by.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered articles template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the tag instance based on the provided slug or returns a 404 if not found.</p></li>
+<li><p>Filters articles that are associated with the retrieved tag.</p></li>
+<li><p>Prepares the context with the filtered articles.</p></li>
+<li><p>Renders the articles template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>articles: The list of articles associated with the specified tag.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.articles_main">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">articles_main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#articles_main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.articles_main" title="Link to this definition">#</a></dt>
+<dd><p>Handles the main view for displaying articles with pagination functionality.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered ‘articles/articles_main.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Paginates the retrieved articles using the paginateArticles function, displaying 12 articles per page.</p></li>
+<li><p>Prepares the context with the articles, search query, and custom pagination range.</p></li>
+<li><p>Renders the ‘articles/articles_main.html’ template with the context.</p></li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.createArticle">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">createArticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#createArticle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.createArticle" title="Link to this definition">#</a></dt>
+<dd><p>Handles the creation of a new article by the logged-in user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered article form template or a redirect to the user’s account page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Initializes an empty ArticleForm for GET requests.</p></li>
+<li><dl class="simple">
+<dt>Processes POST requests with form data and files:</dt><dd><ol class="loweralpha simple">
+<li><dl class="simple">
+<dt>If the form is valid:</dt><dd><ol class="lowerroman simple">
+<li><p>Saves the article instance without committing to set the owner.</p></li>
+<li><p>Sets a password for private articles.</p></li>
+<li><p>Saves the article instance.</p></li>
+<li><p>Adds tags to the article.</p></li>
+<li><p>Redirects to the user’s account page.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>If the form is invalid, it continues to render the form with errors.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Renders the article form template with the form context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>form: The ArticleForm instance for creating a new article.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.deleteArticle">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">deleteArticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#deleteArticle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.deleteArticle" title="Link to this definition">#</a></dt>
+<dd><p>Handles the deletion of an existing article by the logged-in user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>pk</strong> (<em>str</em>) – The primary key of the article to be deleted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered delete confirmation template or a redirect to the articles list page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Retrieves the article instance associated with the user and the provided primary key.</p></li>
+<li><p>If the request method is POST, deletes the article and redirects to the articles list page.</p></li>
+<li><p>If the request method is GET, renders the delete confirmation template.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>object: The article instance being deleted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.delete_review">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">delete_review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">review_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#delete_review"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.delete_review" title="Link to this definition">#</a></dt>
+<dd><p>Handles the deletion of an existing review.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>review_id</strong> (<em>str</em>) – The ID of the review to be deleted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered delete confirmation template or a redirect to the associated article.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the review instance based on the provided review ID or returns a 404 if not found.</p></li>
+<li><p>If the request method is POST and the delete confirmation is present in the request, deletes the review and redirects to the associated article.</p></li>
+<li><p>If the request method is GET, renders the delete confirmation template.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>review: The review instance being deleted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.edit_review">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">edit_review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">review_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#edit_review"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.edit_review" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for editing an existing review.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>review_id</strong> (<em>str</em>) – The ID of the review to be edited.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered edit review template or a redirect to the associated article.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the review instance based on the provided review ID or returns a 404 if not found.</p></li>
+<li><p>Initializes the ReviewForm with the review instance for GET requests.</p></li>
+<li><dl class="simple">
+<dt>Processes POST requests with form data:</dt><dd><ol class="loweralpha simple">
+<li><p>If the form is valid, saves the updated review and redirects to the associated article.</p></li>
+<li><p>If the form is invalid, it continues to render the form with errors.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Renders the edit review template with the form and review context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>form: The ReviewForm instance for editing the review.</p></li>
+<li><p>review: The review instance being edited.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.generate_pdf">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">generate_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">article_slug</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#generate_pdf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.generate_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Generates a PDF for a specific article and serves it as a downloadable file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>article_slug</strong> (<em>str</em>) – The slug identifier for the article to generate the PDF for.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object containing the generated PDF.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the article based on the provided slug or returns a 404 if not found.</p></li>
+<li><p>Sets up the HTTP response for a PDF file with the appropriate content type and headers.</p></li>
+<li><p>Determines the image path if the article has an associated image.</p></li>
+<li><p>Renders the HTML content for the PDF using a template.</p></li>
+<li><p>Uses xhtml2pdf to generate the PDF from the HTML content.</p></li>
+<li><p>If there are errors during PDF generation, returns an error response.</p></li>
+<li><p>Returns the generated PDF as an HTTP response.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the PDF template includes:</dt><dd><ul class="simple">
+<li><p>article: The article instance for which the PDF is being generated.</p></li>
+<li><p>image_path: The file path of the article’s associated image, if any.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.get_image_size">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">get_image_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#get_image_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.get_image_size" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves the dimensions of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – The path to the image file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the width and height of the image in pixels.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Opens the image file located at the specified path.</p></li>
+<li><p>Retrieves the dimensions (width and height) of the image.</p></li>
+<li><p>Returns the dimensions as a tuple (width, height).</p></li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.link_callback">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">link_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#link_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.link_callback" title="Link to this definition">#</a></dt>
+<dd><p>Converts URIs in the PDF generation HTML to the appropriate absolute file system paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uri</strong> (<em>str</em>) – The URI that needs to be converted to a file path.</p></li>
+<li><p><strong>rel</strong> (<em>str</em>) – A relative path, typically unused in this context.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The absolute file system path corresponding to the given URI.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Determines the base URL and root directory for static and media files from the Django settings.</p></li>
+<li><p>Checks if the URI starts with the media or static URL, and converts it to the corresponding file system path.</p></li>
+<li><p>If the URI does not match media or static URLs, returns the URI as is (for absolute URLs).</p></li>
+<li><p>Raises an exception if the converted path does not correspond to an existing file.</p></li>
+</ol>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the URI does not start with the media or static URL, or if the file does not exist at the converted path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="articles.views.updateArticle">
+<span class="sig-prename descclassname"><span class="pre">articles.views.</span></span><span class="sig-name descname"><span class="pre">updateArticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/articles/views.html#updateArticle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#articles.views.updateArticle" title="Link to this definition">#</a></dt>
+<dd><p>Handles the updating of an existing article by the logged-in user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>pk</strong> (<em>str</em>) – The primary key of the article to be updated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered article form template or a redirect to the user’s account page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Retrieves the article instance associated with the user and the provided primary key.</p></li>
+<li><p>Initializes the ArticleForm with the article instance for GET requests.</p></li>
+<li><dl class="simple">
+<dt>Processes POST requests with form data and files:</dt><dd><ol class="loweralpha simple">
+<li><dl class="simple">
+<dt>If the form is valid:</dt><dd><ol class="lowerroman simple">
+<li><p>Saves the updated article instance.</p></li>
+<li><p>Clears existing tags and adds the new tags from the form.</p></li>
+<li><p>Redirects to the user’s account page.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>If the form is invalid, it continues to render the form with errors.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Renders the article form template with the form and article context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>form: The ArticleForm instance for updating the article.</p></li>
+<li><p>article: The article instance being updated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="models.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Models.py</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="forms.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Forms.py</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.article"><code class="docutils literal notranslate"><span class="pre">article()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.articles"><code class="docutils literal notranslate"><span class="pre">articles()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.articles_by_tag"><code class="docutils literal notranslate"><span class="pre">articles_by_tag()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.articles_main"><code class="docutils literal notranslate"><span class="pre">articles_main()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.createArticle"><code class="docutils literal notranslate"><span class="pre">createArticle()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.deleteArticle"><code class="docutils literal notranslate"><span class="pre">deleteArticle()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.delete_review"><code class="docutils literal notranslate"><span class="pre">delete_review()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.edit_review"><code class="docutils literal notranslate"><span class="pre">edit_review()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.generate_pdf"><code class="docutils literal notranslate"><span class="pre">generate_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.get_image_size"><code class="docutils literal notranslate"><span class="pre">get_image_size()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.link_callback"><code class="docutils literal notranslate"><span class="pre">link_callback()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articles.views.updateArticle"><code class="docutils literal notranslate"><span class="pre">updateArticle()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Maksim Vasiukhnevich, Aliaksei Tutski
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Politechnika Bialostocka 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1063 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Views.py &#8212; WWW.BLOGBUT.PL  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'users/views';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Forms.py" href="forms.html" />
+    <link rel="prev" title="Models.py" href="models.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">WWW.BLOGBUT.PL  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../articles/models.html">Models.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../articles/views.html">Views.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../articles/forms.html">Forms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../articles/utils.html">Utils.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Users</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="models.html">Models.py</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Views.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html">Forms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utils.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="context_processors.html">Forms.py</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/users/views.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Views.py</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.about_us"><code class="docutils literal notranslate"><span class="pre">about_us()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.contact"><code class="docutils literal notranslate"><span class="pre">contact()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.createMessage"><code class="docutils literal notranslate"><span class="pre">createMessage()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.createSkill"><code class="docutils literal notranslate"><span class="pre">createSkill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.deleteSkill"><code class="docutils literal notranslate"><span class="pre">deleteSkill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.editAccount"><code class="docutils literal notranslate"><span class="pre">editAccount()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.inbox"><code class="docutils literal notranslate"><span class="pre">inbox()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.loginUser"><code class="docutils literal notranslate"><span class="pre">loginUser()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.logoutUser"><code class="docutils literal notranslate"><span class="pre">logoutUser()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.profiles"><code class="docutils literal notranslate"><span class="pre">profiles()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.profiles_by_skill"><code class="docutils literal notranslate"><span class="pre">profiles_by_skill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.registerUser"><code class="docutils literal notranslate"><span class="pre">registerUser()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.updateSkill"><code class="docutils literal notranslate"><span class="pre">updateSkill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.userAccount"><code class="docutils literal notranslate"><span class="pre">userAccount()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.userProfile"><code class="docutils literal notranslate"><span class="pre">userProfile()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.viewMessage"><code class="docutils literal notranslate"><span class="pre">viewMessage()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-users.views">
+<span id="views-py"></span><h1>Views.py<a class="headerlink" href="#module-users.views" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.about_us">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">about_us</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#about_us"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.about_us" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying the “About Us” page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered “About Us” page template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Renders the “About Us” page template.</p></li>
+</ol>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">about_us</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.contact">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#contact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.contact" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying the contact page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered contact page template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Renders the contact page template.</p></li>
+</ol>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contact</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.createMessage">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">createMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#createMessage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.createMessage" title="Link to this definition">#</a></dt>
+<dd><p>Handles the creation and sending of a message to a specified user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – The username of the recipient of the message.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered message form template or a redirect to the recipient’s profile page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the recipient based on the provided username.</p></li>
+<li><p>Initializes an empty MessageForm for GET requests.</p></li>
+<li><dl class="simple">
+<dt>Tries to retrieve the profile of the sender (logged-in user):</dt><dd><ol class="loweralpha simple">
+<li><p>If the user is not logged in, sets the sender to None.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Processes POST requests to create and send a message:</dt><dd><ol class="loweralpha simple">
+<li><p>Populates the MessageForm with POST data.</p></li>
+<li><p>If the form is valid, sets the sender, recipient, name, and email fields of the message and saves it.</p></li>
+<li><p>Displays a success message and redirects to the recipient’s profile page.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Prepares the context with the recipient’s profile and the form.</p></li>
+<li><p>Renders the message form template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>recipient: The Profile instance of the message recipient.</p></li>
+<li><p>form: The MessageForm instance for creating the message.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">createMessage</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;john_doe&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.createSkill">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">createSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#createSkill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.createSkill" title="Link to this definition">#</a></dt>
+<dd><p>Only for Admin</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.deleteSkill">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">deleteSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skill_slug</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#deleteSkill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.deleteSkill" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for deleting an existing faculty from the logged-in user’s profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>skill_slug</strong> (<em>str</em>) – The slug identifier for the faculty to be deleted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered delete confirmation template or a redirect to the user’s account page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Retrieves the faculty instance from the user’s profile based on the provided slug.</p></li>
+<li><dl class="simple">
+<dt>Processes POST requests to delete the skill:</dt><dd><ol class="loweralpha simple">
+<li><p>Removes the faculty from the user’s profile.</p></li>
+<li><p>Redirects to the ‘account’ page with a success message.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Prepares the context with the skill to be deleted.</p></li>
+<li><p>Renders the delete confirmation template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>object: The Faculty instance to be deleted.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">deleteSkill</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Computer Sience&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.editAccount">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">editAccount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#editAccount"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.editAccount" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for editing the logged-in user’s account details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered profile form template or a redirect to the user’s account page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Initializes the ProfileForm with the user’s profile instance for GET requests.</p></li>
+<li><dl class="simple">
+<dt>Processes POST requests to update the user’s profile:</dt><dd><ol class="loweralpha simple">
+<li><p>Populates the ProfileForm with POST data and files.</p></li>
+<li><p>If the form is valid, saves the updated profile and redirects to the ‘account’ page.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Prepares the context with the form.</p></li>
+<li><p>Renders the profile form template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>form: The ProfileForm instance for editing the user’s profile.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">editAccount</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.inbox">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">inbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#inbox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.inbox" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying the logged-in user’s inbox with message requests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered inbox template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Retrieves all message requests associated with the user’s profile.</p></li>
+<li><p>Counts the number of unread message requests.</p></li>
+<li><p>Prepares the context with the message requests and the count of unread messages.</p></li>
+<li><p>Renders the inbox template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>messageRequests: A queryset of all message requests associated with the user’s profile.</p></li>
+<li><p>unreadCount: The count of unread message requests.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inbox</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.loginUser">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">loginUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#loginUser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.loginUser" title="Link to this definition">#</a></dt>
+<dd><p>Handles the user login process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered login page or a redirect to the user’s profile or account page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Checks if the user is already authenticated:</dt><dd><ol class="loweralpha simple">
+<li><p>If authenticated, redirects to the ‘profile’ page.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Handles POST requests to log in the user:</dt><dd><ol class="loweralpha simple">
+<li><p>Retrieves the username and password from the POST data.</p></li>
+<li><dl class="simple">
+<dt>Tries to get the user with the provided username:</dt><dd><ol class="lowerroman simple">
+<li><p>If the user does not exist, adds an error message.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Authenticates the user with the provided credentials:</dt><dd><ol class="lowerroman simple">
+<li><p>If the authentication is successful, logs in the user and redirects to the ‘next’ URL if provided, otherwise to the ‘account’ page.</p></li>
+<li><p>If authentication fails, adds an error message.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Renders the login page template for GET requests or if login fails.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>page: The name of the page, used for template rendering logic.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.logoutUser">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">logoutUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#logoutUser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.logoutUser" title="Link to this definition">#</a></dt>
+<dd><p>Handles the user logout process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object that redirects the user to the login page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Logs out the user by calling Django’s <cite>logout</cite> function.</p></li>
+<li><p>Adds an informational message indicating the user has been logged out.</p></li>
+<li><p>Redirects the user to the ‘login’ page.</p></li>
+</ol>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">logoutUser</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.profiles">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">profiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#profiles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.profiles" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying a list of user profiles with search and pagination functionality.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered profiles template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves profiles based on a search query using the searchProfiles function.</p></li>
+<li><p>Paginates the retrieved profiles using the paginateProfiles function, displaying 6 profiles per page.</p></li>
+<li><p>Prepares the context with the profiles, search query, and custom pagination range.</p></li>
+<li><p>Renders the profiles template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>profiles: The paginated list of profiles matching the search query.</p></li>
+<li><p>search_query: The search query string used for filtering profiles.</p></li>
+<li><p>custom_range: The range of page numbers for pagination controls.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">profiles</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.profiles_by_skill">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">profiles_by_skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skill_slug</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#profiles_by_skill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.profiles_by_skill" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying profiles filtered by a specific faculty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>skill_slug</strong> (<em>str</em>) – The slug identifier for the faculty to filter profiles by.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered profiles template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the faculty instance based on the provided slug or returns a 404 if not found.</p></li>
+<li><p>Filters profiles that have the specified faculty.</p></li>
+<li><p>Prepares the context with the filtered profiles.</p></li>
+<li><p>Renders the profiles template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>profiles: The list of profiles that have the specified skill.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">profiles_by_skill</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Computer Sience&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.registerUser">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">registerUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#registerUser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.registerUser" title="Link to this definition">#</a></dt>
+<dd><p>Handles the user registration process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered registration page or a redirect to the edit account page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Sets the page context to ‘register’.</p></li>
+<li><p>Initializes an empty CustomUserCreationForm for GET requests.</p></li>
+<li><dl class="simple">
+<dt>Processes POST requests to register a new user:</dt><dd><ol class="loweralpha simple">
+<li><p>Populates the CustomUserCreationForm with POST data.</p></li>
+<li><dl class="simple">
+<dt>If the form is valid:</dt><dd><ol class="lowerroman simple">
+<li><p>Saves the user instance with a lowercase username.</p></li>
+<li><p>Displays a success message.</p></li>
+<li><p>Logs in the newly registered user.</p></li>
+<li><p>Redirects to the ‘edit-account’ page.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>If the form is invalid, displays an error message.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Renders the registration page template with the form context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>page: The name of the page, used for template rendering logic.</p></li>
+<li><p>form: The CustomUserCreationForm instance for user registration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.updateSkill">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">updateSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skill_slug</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#updateSkill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.updateSkill" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for updating an existing faculty in the logged-in user’s profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>skill_slug</strong> (<em>str</em>) – The slug identifier for the faculty to be updated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered faculty form template or a redirect to the user’s account page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Retrieves the current faculty instance based on the provided slug or returns a 404 if not found.</p></li>
+<li><dl class="simple">
+<dt>Processes POST requests to update the skill:</dt><dd><ol class="loweralpha simple">
+<li><p>Populates the SkillForm with POST data.</p></li>
+<li><p>If the form is valid, replaces the current skill with the new skill in the user’s profile and redirects to the ‘account’ page with a success message.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Initializes the SkillForm with the current skill for GET requests.</p></li>
+<li><p>Prepares the context with the form and the current skill.</p></li>
+<li><p>Renders the skill form template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>form: The SkillForm instance for updating the skill.</p></li>
+<li><p>current_skill: The current Faculty instance being updated.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">updateSkill</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Architecture&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.userAccount">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">userAccount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#userAccount"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.userAccount" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying the logged-in user’s account details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered user account template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Retrieves all skills associated with the user’s profile.</p></li>
+<li><p>Retrieves all articles associated with the user’s profile.</p></li>
+<li><p>Prepares the context with the profile, skills, and articles.</p></li>
+<li><p>Renders the user account template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>profile: The Profile instance of the logged-in user.</p></li>
+<li><p>skills: A queryset of skills associated with the user’s profile.</p></li>
+<li><p>articles: A queryset of articles associated with the user’s profile.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">userAccount</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.userProfile">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">userProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#userProfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.userProfile" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying a user’s profile, including their main and extra skills.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – The username of the profile to be displayed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered user profile template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile associated with the provided username.</p></li>
+<li><p>Retrieves the main skills (first 10) and extra skills (all skills starting from the 3rd) of the profile.</p></li>
+<li><p>Prepares the context with the profile, main skills, and extra skills.</p></li>
+<li><p>Renders the user profile template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>profile: The Profile instance of the user.</p></li>
+<li><p>main_skills: A list of the first 10 skills of the user.</p></li>
+<li><p>extra_skills: A list of the user’s skills starting from the 3rd skill.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">userProfile</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;john_doe&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="users.views.viewMessage">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">viewMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/views.html#viewMessage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.viewMessage" title="Link to this definition">#</a></dt>
+<dd><p>Handles the view for displaying a single message and marking it as read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing metadata about the request.</p></li>
+<li><p><strong>pk</strong> (<em>int</em>) – The primary key of the message to be viewed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The HTTP response object with the rendered message template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>This view function performs the following tasks:</dt><dd><ol class="arabic simple">
+<li><p>Retrieves the profile of the logged-in user.</p></li>
+<li><p>Retrieves the message instance associated with the user’s profile and the provided primary key.</p></li>
+<li><p>If the message is unread, marks it as read and saves the change.</p></li>
+<li><p>Prepares the context with the message.</p></li>
+<li><p>Renders the message template with the context.</p></li>
+</ol>
+</dd>
+<dt>The context for rendering the template includes:</dt><dd><ul class="simple">
+<li><p>message: The Message instance to be viewed.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">viewMessage</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="models.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Models.py</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="forms.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Forms.py</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.about_us"><code class="docutils literal notranslate"><span class="pre">about_us()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.contact"><code class="docutils literal notranslate"><span class="pre">contact()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.createMessage"><code class="docutils literal notranslate"><span class="pre">createMessage()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.createSkill"><code class="docutils literal notranslate"><span class="pre">createSkill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.deleteSkill"><code class="docutils literal notranslate"><span class="pre">deleteSkill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.editAccount"><code class="docutils literal notranslate"><span class="pre">editAccount()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.inbox"><code class="docutils literal notranslate"><span class="pre">inbox()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.loginUser"><code class="docutils literal notranslate"><span class="pre">loginUser()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.logoutUser"><code class="docutils literal notranslate"><span class="pre">logoutUser()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.profiles"><code class="docutils literal notranslate"><span class="pre">profiles()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.profiles_by_skill"><code class="docutils literal notranslate"><span class="pre">profiles_by_skill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.registerUser"><code class="docutils literal notranslate"><span class="pre">registerUser()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.updateSkill"><code class="docutils literal notranslate"><span class="pre">updateSkill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.userAccount"><code class="docutils literal notranslate"><span class="pre">userAccount()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.userProfile"><code class="docutils literal notranslate"><span class="pre">userProfile()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.views.viewMessage"><code class="docutils literal notranslate"><span class="pre">viewMessage()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Maksim Vasiukhnevich, Aliaksei Tutski
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Politechnika Bialostocka 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

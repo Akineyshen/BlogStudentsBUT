@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="projects">
+    <section class="main-section">
+        <div class="container_main">
+            <div class="text_section">
+            <div class="Little_Text">Read and Write</div>
+            <div class="Big_Text">Tell us about your <br> student life using our blog</div>
+            <div class="Middle_Text">Student life at the Bialystok University of Technology. <br> Find out, share, write and read blogs.</div>
+            {% if request.user.is_authenticated %}
+            <li class="header__menuItem"><a href="{% url 'create_article' %}" class="btn btn--sub"><i class="fa-solid fa-pen"></i>   Create Article</a></li>
+            {% else %}
+            <li class="header__menuItem"><a href="{% url 'register' %}" class="btn btn--sub"><i class="fa-solid fa-pen"></i>   Create Article</a></li>
+            {% endif %}
+            </div>
+            <div class="img_section">
+            <img src="../../../media/image_site/laptop.png" alt="Decorative Image" style="max-width:100%; height:auto;">
+            </div>
+        </div>
+    </section>
+    <section class="projectsList">
+        <div class="container">
+            <div class="grid grid--three">
+                {% for article in articles %}
+                <div class="column">
+                    <div class="card project">
+                        <a href="{% url 'article' article.slug %}" class="project">
+                            <img class="project__thumbnail" src="{{ article.image.url }}" alt="скриншот проекта" />
+                            <div class="card__body">
+                                <h3 class="project__title">
+                                    {% if article.is_private %}
+                                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                                    {% endif %}
+                                    {{ article.title }}
+                                </h3>
+                                <p>{% if request.user.is_authenticated and request.user.username == article.owner.username %}
+                                    <a class="project__author" href="{% url 'account' %}">Author: {{ article.owner.name }}</a>
+                                    {% else %}
+                                    <a class="project__author" href="{% url 'user_profile' article.owner %}">Author:
+                                        {{ article.owner.name }}</a>
+                                    {% endif %}
+                                </p>
+                                <p class="project--rating">
+                                    <span style="font-weight: bold;">Total comments: {{ article.review_count }} </span>
+                                </p>
+                                <div class="project__tags">
+                                    {% for tag in article.tags.all %}
+                                    <a href="{% url 'tag' tag.slug %}" class="tag tag--pill tag--mains">{{tag}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% include 'pagination.html' with queryset=articles custom_range=custom_range %}
+</main>
+
+{% endblock %}

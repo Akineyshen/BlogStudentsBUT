@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>articles.views &#8212; WWW.BLOGBUT.PL  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/articles/views';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">WWW.BLOGBUT.PL  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/models.html">Models.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/views.html">Views.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/forms.html">Forms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/utils.html">Utils.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/index.html">Users</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for articles.views</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">get_object_or_404</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Article</span><span class="p">,</span> <span class="n">Tag</span><span class="p">,</span> <span class="n">Review</span>
+<span class="kn">from</span> <span class="nn">.forms</span> <span class="kn">import</span> <span class="n">ArticleForm</span><span class="p">,</span> <span class="n">ReviewForm</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">messages</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.decorators</span> <span class="kn">import</span> <span class="n">login_required</span>
+<span class="kn">from</span> <span class="nn">django.core</span> <span class="kn">import</span> <span class="n">paginator</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">paginateArticles</span><span class="p">,</span> <span class="n">searchArticles</span>
+<span class="kn">from</span> <span class="nn">reportlab.lib.pagesizes</span> <span class="kn">import</span> <span class="n">letter</span>
+<span class="kn">from</span> <span class="nn">reportlab.pdfgen</span> <span class="kn">import</span> <span class="n">canvas</span>
+<span class="kn">from</span> <span class="nn">reportlab.lib.utils</span> <span class="kn">import</span> <span class="n">ImageReader</span>
+<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">xhtml2pdf</span> <span class="kn">import</span> <span class="n">pisa</span>
+<span class="kn">from</span> <span class="nn">django.template.loader</span> <span class="kn">import</span> <span class="n">render_to_string</span>
+
+
+<div class="viewcode-block" id="articles_main">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.articles_main">[docs]</a>
+<span class="k">def</span> <span class="nf">articles_main</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the main view for displaying articles with pagination functionality.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered &#39;articles/articles_main.html&#39; template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Paginates the retrieved articles using the paginateArticles function, displaying 12 articles per page.</span>
+<span class="sd">        2. Prepares the context with the articles, search query, and custom pagination range.</span>
+<span class="sd">        3. Renders the &#39;articles/articles_main.html&#39; template with the context.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">custom_range</span><span class="p">,</span> <span class="n">articles</span> <span class="o">=</span> <span class="n">paginateArticles</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;articles&#39;</span><span class="p">:</span> <span class="n">articles</span><span class="p">,</span> <span class="s1">&#39;search_query&#39;</span><span class="p">:</span> <span class="n">search_query</span><span class="p">,</span> <span class="s1">&#39;custom_range&#39;</span><span class="p">:</span> <span class="n">custom_range</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/articles_main.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="articles">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.articles">[docs]</a>
+<span class="k">def</span> <span class="nf">articles</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the main view for displaying articles with search and pagination functionality.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered &#39;articles/articles_main.html&#39; template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves articles based on a search query using the searchArticles function.</span>
+<span class="sd">        2. Paginates the retrieved articles using the paginateArticles function, displaying 12 articles per page.</span>
+<span class="sd">        3. Prepares the context with the articles, search query, and custom pagination range.</span>
+<span class="sd">        4. Renders the &#39;articles/articles_main.html&#39; template with the context.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">articles</span><span class="p">,</span> <span class="n">search_query</span> <span class="o">=</span> <span class="n">searchArticles</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="n">custom_range</span><span class="p">,</span> <span class="n">articles</span> <span class="o">=</span> <span class="n">paginateArticles</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;articles&#39;</span><span class="p">:</span> <span class="n">articles</span><span class="p">,</span> <span class="s1">&#39;search_query&#39;</span><span class="p">:</span> <span class="n">search_query</span><span class="p">,</span> <span class="s1">&#39;custom_range&#39;</span><span class="p">:</span> <span class="n">custom_range</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/articles.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="article">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.article">[docs]</a>
+<span class="k">def</span> <span class="nf">article</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">article_slug</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying a single article, including handling private articles and comments.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        article_slug (str): The slug identifier for the article to be displayed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered article template or password form.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the article based on the provided slug or returns a 404 if not found.</span>
+<span class="sd">        2. Fetches all tags associated with the article.</span>
+<span class="sd">        3. Initializes a blank review form.</span>
+<span class="sd">        4. If the article is private and the session does not have authorization, it checks the password:</span>
+<span class="sd">            a. If the password is correct, sets the session authorization and redirects to the article.</span>
+<span class="sd">            b. If the password is incorrect or not provided, renders the password form.</span>
+<span class="sd">        5. If a comment is posted, validates the form and saves the review, associating it with the article and the user.</span>
+<span class="sd">        6. Renders the article with its details, tags, and the review form.</span>
+
+<span class="sd">    The context for rendering the templates includes:</span>
+<span class="sd">        - article: The article object.</span>
+<span class="sd">        - form: The review form.</span>
+<span class="sd">        - tags: The tags associated with the article.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">article</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Article</span><span class="p">,</span> <span class="n">slug</span><span class="o">=</span><span class="n">article_slug</span><span class="p">)</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="n">article</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ReviewForm</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">article</span><span class="o">.</span><span class="n">is_private</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">article_slug</span> <span class="o">+</span> <span class="s1">&#39;_auth&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span> <span class="ow">and</span> <span class="s1">&#39;password&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">article</span><span class="o">.</span><span class="n">check_password</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]):</span>
+                <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="n">article_slug</span> <span class="o">+</span> <span class="s1">&#39;_auth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Password correct, you can now view the article.&#39;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;article&#39;</span><span class="p">,</span> <span class="n">article_slug</span><span class="o">=</span><span class="n">article_slug</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Incorrect password&#39;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/password_form.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;article&#39;</span><span class="p">:</span> <span class="n">article</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/password_form.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;article&#39;</span><span class="p">:</span> <span class="n">article</span><span class="p">})</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span> <span class="ow">and</span> <span class="s1">&#39;comment&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">ReviewForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">review</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">review</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="n">article</span>
+            <span class="n">review</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+            <span class="n">review</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Your comment has been added!&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;article&#39;</span><span class="p">,</span> <span class="n">article_slug</span><span class="o">=</span><span class="n">article</span><span class="o">.</span><span class="n">slug</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/single_article.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;article&#39;</span><span class="p">:</span> <span class="n">article</span><span class="p">,</span> <span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">,</span> <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="n">tags</span><span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="createArticle">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.createArticle">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s2">&quot;login&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">createArticle</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the creation of a new article by the logged-in user.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered article form template or a redirect to the user&#39;s account page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Initializes an empty ArticleForm for GET requests.</span>
+<span class="sd">        2. Processes POST requests with form data and files:</span>
+<span class="sd">            a. If the form is valid:</span>
+<span class="sd">                i. Saves the article instance without committing to set the owner.</span>
+<span class="sd">                ii. Sets a password for private articles.</span>
+<span class="sd">                iii. Saves the article instance.</span>
+<span class="sd">                iv. Adds tags to the article.</span>
+<span class="sd">                v. Redirects to the user&#39;s account page.</span>
+<span class="sd">            b. If the form is invalid, it continues to render the form with errors.</span>
+<span class="sd">        3. Renders the article form template with the form context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - form: The ArticleForm instance for creating a new article.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ArticleForm</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">ArticleForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">FILES</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">article</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">article</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+            <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;is_private&#39;</span><span class="p">]:</span>
+                <span class="n">article</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">])</span>
+            <span class="n">article</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">article</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;tag&#39;</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;account&#39;</span><span class="p">)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;articles/article_form.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="updateArticle">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.updateArticle">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s2">&quot;login&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">updateArticle</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the updating of an existing article by the logged-in user.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        pk (str): The primary key of the article to be updated.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered article form template or a redirect to the user&#39;s account page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Retrieves the article instance associated with the user and the provided primary key.</span>
+<span class="sd">        3. Initializes the ArticleForm with the article instance for GET requests.</span>
+<span class="sd">        4. Processes POST requests with form data and files:</span>
+<span class="sd">            a. If the form is valid:</span>
+<span class="sd">                i. Saves the updated article instance.</span>
+<span class="sd">                ii. Clears existing tags and adds the new tags from the form.</span>
+<span class="sd">                iii. Redirects to the user&#39;s account page.</span>
+<span class="sd">            b. If the form is invalid, it continues to render the form with errors.</span>
+<span class="sd">        5. Renders the article form template with the form and article context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - form: The ArticleForm instance for updating the article.</span>
+<span class="sd">        - article: The article instance being updated.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">article</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">article_set</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ArticleForm</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">article</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">ArticleForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">FILES</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">article</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">article</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">article</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="n">article</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;tag&#39;</span><span class="p">])</span>
+
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;account&#39;</span><span class="p">)</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">,</span> <span class="s1">&#39;article&#39;</span><span class="p">:</span> <span class="n">article</span><span class="p">,</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;articles/article_form.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="deleteArticle">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.deleteArticle">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s2">&quot;login&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">deleteArticle</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the deletion of an existing article by the logged-in user.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        pk (str): The primary key of the article to be deleted.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered delete confirmation template or a redirect to the articles list page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Retrieves the article instance associated with the user and the provided primary key.</span>
+<span class="sd">        3. If the request method is POST, deletes the article and redirects to the articles list page.</span>
+<span class="sd">        4. If the request method is GET, renders the delete confirmation template.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - object: The article instance being deleted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">article</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">article_set</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">article</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;object&#39;</span><span class="p">:</span> <span class="n">article</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;delete_template.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="articles_by_tag">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.articles_by_tag">[docs]</a>
+<span class="k">def</span> <span class="nf">articles_by_tag</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">tag_slug</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying articles filtered by a specific tag.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        tag_slug (str): The slug identifier for the tag to filter articles by.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered articles template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the tag instance based on the provided slug or returns a 404 if not found.</span>
+<span class="sd">        2. Filters articles that are associated with the retrieved tag.</span>
+<span class="sd">        3. Prepares the context with the filtered articles.</span>
+<span class="sd">        4. Renders the articles template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - articles: The list of articles associated with the specified tag.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Tag</span><span class="p">,</span> <span class="n">slug</span><span class="o">=</span><span class="n">tag_slug</span><span class="p">)</span>
+    <span class="n">articles</span> <span class="o">=</span><span class="n">Article</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">tags__in</span><span class="o">=</span><span class="p">[</span><span class="n">tag</span><span class="p">])</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;articles&quot;</span><span class="p">:</span> <span class="n">articles</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;articles/articles.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="edit_review">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.edit_review">[docs]</a>
+<span class="k">def</span> <span class="nf">edit_review</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">review_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for editing an existing review.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        review_id (str): The ID of the review to be edited.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered edit review template or a redirect to the associated article.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the review instance based on the provided review ID or returns a 404 if not found.</span>
+<span class="sd">        2. Initializes the ReviewForm with the review instance for GET requests.</span>
+<span class="sd">        3. Processes POST requests with form data:</span>
+<span class="sd">            a. If the form is valid, saves the updated review and redirects to the associated article.</span>
+<span class="sd">            b. If the form is invalid, it continues to render the form with errors.</span>
+<span class="sd">        4. Renders the edit review template with the form and review context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - form: The ReviewForm instance for editing the review.</span>
+<span class="sd">        - review: The review instance being edited.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">review</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Review</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">review_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">ReviewForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">review</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;article&#39;</span><span class="p">,</span> <span class="n">article_slug</span><span class="o">=</span><span class="n">review</span><span class="o">.</span><span class="n">article</span><span class="o">.</span><span class="n">slug</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">ReviewForm</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">review</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/edit_comment.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">,</span> <span class="s1">&#39;review&#39;</span><span class="p">:</span> <span class="n">review</span><span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="delete_review">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.delete_review">[docs]</a>
+<span class="k">def</span> <span class="nf">delete_review</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">review_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the deletion of an existing review.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        review_id (str): The ID of the review to be deleted.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered delete confirmation template or a redirect to the associated article.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the review instance based on the provided review ID or returns a 404 if not found.</span>
+<span class="sd">        2. If the request method is POST and the delete confirmation is present in the request, deletes the review and redirects to the associated article.</span>
+<span class="sd">        3. If the request method is GET, renders the delete confirmation template.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - review: The review instance being deleted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">review</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Review</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">review_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;confirm_delete&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">review</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;article&#39;</span><span class="p">,</span> <span class="n">article_slug</span><span class="o">=</span><span class="n">review</span><span class="o">.</span><span class="n">article</span><span class="o">.</span><span class="n">slug</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;articles/delete_comment.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;review&#39;</span><span class="p">:</span> <span class="n">review</span><span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="get_image_size">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.get_image_size">[docs]</a>
+<span class="k">def</span> <span class="nf">get_image_size</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieves the dimensions of an image.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        image_path (str): The path to the image file.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A tuple containing the width and height of the image in pixels.</span>
+
+<span class="sd">    This function performs the following tasks:</span>
+<span class="sd">        1. Opens the image file located at the specified path.</span>
+<span class="sd">        2. Retrieves the dimensions (width and height) of the image.</span>
+<span class="sd">        3. Returns the dimensions as a tuple (width, height).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">img</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span></div>
+
+
+
+<div class="viewcode-block" id="generate_pdf">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.generate_pdf">[docs]</a>
+<span class="k">def</span> <span class="nf">generate_pdf</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">article_slug</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generates a PDF for a specific article and serves it as a downloadable file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        article_slug (str): The slug identifier for the article to generate the PDF for.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object containing the generated PDF.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the article based on the provided slug or returns a 404 if not found.</span>
+<span class="sd">        2. Sets up the HTTP response for a PDF file with the appropriate content type and headers.</span>
+<span class="sd">        3. Determines the image path if the article has an associated image.</span>
+<span class="sd">        4. Renders the HTML content for the PDF using a template.</span>
+<span class="sd">        5. Uses xhtml2pdf to generate the PDF from the HTML content.</span>
+<span class="sd">        6. If there are errors during PDF generation, returns an error response.</span>
+<span class="sd">        7. Returns the generated PDF as an HTTP response.</span>
+
+<span class="sd">    The context for rendering the PDF template includes:</span>
+<span class="sd">        - article: The article instance for which the PDF is being generated.</span>
+<span class="sd">        - image_path: The file path of the article&#39;s associated image, if any.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">article</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Article</span><span class="p">,</span> <span class="n">slug</span><span class="o">=</span><span class="n">article_slug</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">content_type</span><span class="o">=</span><span class="s1">&#39;application/pdf&#39;</span><span class="p">)</span>
+    <span class="n">response</span><span class="p">[</span><span class="s1">&#39;Content-Disposition&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;attachment; filename=&quot;</span><span class="si">{</span><span class="n">article</span><span class="o">.</span><span class="n">slug</span><span class="si">}</span><span class="s1">.pdf&quot;&#39;</span>
+
+    <span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">MEDIA_ROOT</span><span class="p">,</span> <span class="n">article</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">if</span> <span class="n">article</span><span class="o">.</span><span class="n">image</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="n">html_content</span> <span class="o">=</span> <span class="n">render_to_string</span><span class="p">(</span><span class="s1">&#39;articles/pdf_template.html&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;article&#39;</span><span class="p">:</span> <span class="n">article</span><span class="p">,</span>
+        <span class="s1">&#39;image_path&#39;</span><span class="p">:</span> <span class="n">image_path</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="n">pisa_status</span> <span class="o">=</span> <span class="n">pisa</span><span class="o">.</span><span class="n">CreatePDF</span><span class="p">(</span><span class="n">html_content</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="n">response</span><span class="p">,</span> <span class="n">link_callback</span><span class="o">=</span><span class="n">link_callback</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">pisa_status</span><span class="o">.</span><span class="n">err</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;We had some errors with code </span><span class="si">{</span><span class="n">pisa_status</span><span class="o">.</span><span class="n">err</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">response</span></div>
+
+
+<div class="viewcode-block" id="link_callback">
+<a class="viewcode-back" href="../../articles/views.html#articles.views.link_callback">[docs]</a>
+<span class="k">def</span> <span class="nf">link_callback</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">rel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts URIs in the PDF generation HTML to the appropriate absolute file system paths.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        uri (str): The URI that needs to be converted to a file path.</span>
+<span class="sd">        rel (str): A relative path, typically unused in this context.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The absolute file system path corresponding to the given URI.</span>
+
+<span class="sd">    This function performs the following tasks:</span>
+<span class="sd">        1. Determines the base URL and root directory for static and media files from the Django settings.</span>
+<span class="sd">        2. Checks if the URI starts with the media or static URL, and converts it to the corresponding file system path.</span>
+<span class="sd">        3. If the URI does not match media or static URLs, returns the URI as is (for absolute URLs).</span>
+<span class="sd">        4. Raises an exception if the converted path does not correspond to an existing file.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        Exception: If the URI does not start with the media or static URL, or if the file does not exist at the converted path.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sUrl</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">STATIC_URL</span>  <span class="c1"># Typically /static/</span>
+    <span class="n">sRoot</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">STATIC_ROOT</span>  <span class="c1"># Typically /var/www/example.com/static/</span>
+    <span class="n">mUrl</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">MEDIA_URL</span>  <span class="c1"># Typically /media/</span>
+    <span class="n">mRoot</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">MEDIA_ROOT</span>  <span class="c1"># Typically /var/www/example.com/media/</span>
+
+    <span class="k">if</span> <span class="n">uri</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">mUrl</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mRoot</span><span class="p">,</span> <span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">mUrl</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">uri</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">sUrl</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sRoot</span><span class="p">,</span> <span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">sUrl</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">uri</span>  <span class="c1"># handle absolute uri (i.e. http://some.tld/foo.png)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+            <span class="s1">&#39;media URI must start with </span><span class="si">{}</span><span class="s1"> or </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sUrl</span><span class="p">,</span> <span class="n">mUrl</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">path</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Maksim Vasiukhnevich, Aliaksei Tutski
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Politechnika Bialostocka 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

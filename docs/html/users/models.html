@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Models.py &#8212; WWW.BLOGBUT.PL  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'users/models';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Views.py" href="views.html" />
+    <link rel="prev" title="Users" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">WWW.BLOGBUT.PL  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../articles/models.html">Models.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../articles/views.html">Views.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../articles/forms.html">Forms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../articles/utils.html">Utils.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Users</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Models.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html">Forms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utils.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="context_processors.html">Forms.py</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/users/models.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Models.py</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message"><code class="docutils literal notranslate"><span class="pre">Message</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.sender"><code class="docutils literal notranslate"><span class="pre">Message.sender</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.recipient"><code class="docutils literal notranslate"><span class="pre">Message.recipient</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.name"><code class="docutils literal notranslate"><span class="pre">Message.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.email"><code class="docutils literal notranslate"><span class="pre">Message.email</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.subject"><code class="docutils literal notranslate"><span class="pre">Message.subject</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.body"><code class="docutils literal notranslate"><span class="pre">Message.body</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.is_read"><code class="docutils literal notranslate"><span class="pre">Message.is_read</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.created"><code class="docutils literal notranslate"><span class="pre">Message.created</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.id"><code class="docutils literal notranslate"><span class="pre">Message.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.__str__"><code class="docutils literal notranslate"><span class="pre">Message.__str__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Message.DoesNotExist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Message.MultipleObjectsReturned</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile"><code class="docutils literal notranslate"><span class="pre">Profile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.user"><code class="docutils literal notranslate"><span class="pre">Profile.user</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.name"><code class="docutils literal notranslate"><span class="pre">Profile.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.email"><code class="docutils literal notranslate"><span class="pre">Profile.email</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.username"><code class="docutils literal notranslate"><span class="pre">Profile.username</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.intro"><code class="docutils literal notranslate"><span class="pre">Profile.intro</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.bio"><code class="docutils literal notranslate"><span class="pre">Profile.bio</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.image"><code class="docutils literal notranslate"><span class="pre">Profile.image</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.skills"><code class="docutils literal notranslate"><span class="pre">Profile.skills</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.facebook"><code class="docutils literal notranslate"><span class="pre">Profile.facebook</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.instagram"><code class="docutils literal notranslate"><span class="pre">Profile.instagram</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.created"><code class="docutils literal notranslate"><span class="pre">Profile.created</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.id"><code class="docutils literal notranslate"><span class="pre">Profile.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.__str__"><code class="docutils literal notranslate"><span class="pre">Profile.__str__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Profile.DoesNotExist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Profile.MultipleObjectsReturned</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill"><code class="docutils literal notranslate"><span class="pre">Skill</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.name"><code class="docutils literal notranslate"><span class="pre">Skill.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.slug"><code class="docutils literal notranslate"><span class="pre">Skill.slug</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.created"><code class="docutils literal notranslate"><span class="pre">Skill.created</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.id"><code class="docutils literal notranslate"><span class="pre">Skill.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.__str__"><code class="docutils literal notranslate"><span class="pre">Skill.__str__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Skill.DoesNotExist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Skill.MultipleObjectsReturned</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-users.models">
+<span id="models-py"></span><h1>Models.py<a class="headerlink" href="#module-users.models" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="users.models.Message">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">users.models.</span></span><span class="sig-name descname"><span class="pre">Message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/models.html#Message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.models.Message" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A model representing a message sent between profiles.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.sender">
+<span class="sig-name descname"><span class="pre">sender</span></span><a class="headerlink" href="#users.models.Message.sender" title="Link to this definition">#</a></dt>
+<dd><p>The profile that sent the message. Can be null or blank. Deletes set to NULL on profile deletion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.recipient">
+<span class="sig-name descname"><span class="pre">recipient</span></span><a class="headerlink" href="#users.models.Message.recipient" title="Link to this definition">#</a></dt>
+<dd><p>The profile that received the message. Can be null or blank. Deletes set to NULL on profile deletion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#users.models.Message.name" title="Link to this definition">#</a></dt>
+<dd><p>The name of the sender. Can be null or blank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#users.models.Message.email" title="Link to this definition">#</a></dt>
+<dd><p>The email of the sender. Can be null or blank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.subject">
+<span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#users.models.Message.subject" title="Link to this definition">#</a></dt>
+<dd><p>The subject of the message. Can be null or blank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.body">
+<span class="sig-name descname"><span class="pre">body</span></span><a class="headerlink" href="#users.models.Message.body" title="Link to this definition">#</a></dt>
+<dd><p>The body of the message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>TextField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.is_read">
+<span class="sig-name descname"><span class="pre">is_read</span></span><a class="headerlink" href="#users.models.Message.is_read" title="Link to this definition">#</a></dt>
+<dd><p>Indicates if the message has been read. Defaults to False. Can be null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.created">
+<span class="sig-name descname"><span class="pre">created</span></span><a class="headerlink" href="#users.models.Message.created" title="Link to this definition">#</a></dt>
+<dd><p>The date the message was created. Automatically set on creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Message.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#users.models.Message.id" title="Link to this definition">#</a></dt>
+<dd><p>A unique identifier for the message, generated automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>UUID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="users.models.Message.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/models.html#Message.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.models.Message.__str__" title="Link to this definition">#</a></dt>
+<dd><p>Returns the string representation of the message, which is the message’s subject.</p>
+</dd></dl>
+
+<dl class="simple">
+<dt>Meta:</dt><dd><p>ordering (list): Specifies the default ordering of messages, first by ‘is_read’ status and then by ‘created’ date in descending order.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="users.models.Message.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#users.models.Message.DoesNotExist" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="users.models.Message.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#users.models.Message.MultipleObjectsReturned" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="users.models.Profile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">users.models.</span></span><span class="sig-name descname"><span class="pre">Profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/models.html#Profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.models.Profile" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A model representing a user profile.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#users.models.Profile.user" title="Link to this definition">#</a></dt>
+<dd><p>A one-to-one relationship with the User model. Can be null or blank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>OneToOneField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#users.models.Profile.name" title="Link to this definition">#</a></dt>
+<dd><p>The name of the user. Default is ‘no_email’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#users.models.Profile.email" title="Link to this definition">#</a></dt>
+<dd><p>The email of the user. Default is ‘no name’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#users.models.Profile.username" title="Link to this definition">#</a></dt>
+<dd><p>The username of the user. Can be blank or null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.intro">
+<span class="sig-name descname"><span class="pre">intro</span></span><a class="headerlink" href="#users.models.Profile.intro" title="Link to this definition">#</a></dt>
+<dd><p>A short introduction for the profile. Can be blank or null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.bio">
+<span class="sig-name descname"><span class="pre">bio</span></span><a class="headerlink" href="#users.models.Profile.bio" title="Link to this definition">#</a></dt>
+<dd><p>A detailed biography for the profile. Can be blank or null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>TextField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#users.models.Profile.image" title="Link to this definition">#</a></dt>
+<dd><p>The profile image. Defaults to ‘profile_images/default.jpg’. Can be blank or null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ImageField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.skills">
+<span class="sig-name descname"><span class="pre">skills</span></span><a class="headerlink" href="#users.models.Profile.skills" title="Link to this definition">#</a></dt>
+<dd><p>A many-to-many relationship with the Skill model. Can be blank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ManyToManyField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.facebook">
+<span class="sig-name descname"><span class="pre">facebook</span></span><a class="headerlink" href="#users.models.Profile.facebook" title="Link to this definition">#</a></dt>
+<dd><p>The Facebook profile link. Can be blank or null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.instagram">
+<span class="sig-name descname"><span class="pre">instagram</span></span><a class="headerlink" href="#users.models.Profile.instagram" title="Link to this definition">#</a></dt>
+<dd><p>The Instagram profile link. Can be blank or null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.created">
+<span class="sig-name descname"><span class="pre">created</span></span><a class="headerlink" href="#users.models.Profile.created" title="Link to this definition">#</a></dt>
+<dd><p>The date and time when the profile was created. Automatically set on creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Profile.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#users.models.Profile.id" title="Link to this definition">#</a></dt>
+<dd><p>A unique identifier for the profile, generated automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>UUID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="users.models.Profile.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/models.html#Profile.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.models.Profile.__str__" title="Link to this definition">#</a></dt>
+<dd><p>Returns the string representation of the profile, which is the profile’s username.</p>
+</dd></dl>
+
+<dl class="simple">
+<dt>Meta:</dt><dd><p>ordering (list): Specifies the default ordering of profiles by the ‘created’ field.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="users.models.Profile.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#users.models.Profile.DoesNotExist" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="users.models.Profile.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#users.models.Profile.MultipleObjectsReturned" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="users.models.Skill">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">users.models.</span></span><span class="sig-name descname"><span class="pre">Skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/models.html#Skill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.models.Skill" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A model representing a skill (Faculty).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Skill.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#users.models.Skill.name" title="Link to this definition">#</a></dt>
+<dd><p>The name of the faculty. It can be blank or null.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Skill.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#users.models.Skill.slug" title="Link to this definition">#</a></dt>
+<dd><p>A URL-friendly slug identifier for the faculty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Skill.created">
+<span class="sig-name descname"><span class="pre">created</span></span><a class="headerlink" href="#users.models.Skill.created" title="Link to this definition">#</a></dt>
+<dd><p>The date and time when the faculty was created. Automatically set on creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="users.models.Skill.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#users.models.Skill.id" title="Link to this definition">#</a></dt>
+<dd><p>A unique identifier for the faculty, generated automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>UUID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="users.models.Skill.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/users/models.html#Skill.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.models.Skill.__str__" title="Link to this definition">#</a></dt>
+<dd><p>Returns the string representation of the skill, which is the skill’s name.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="users.models.Skill.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#users.models.Skill.DoesNotExist" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="users.models.Skill.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#users.models.Skill.MultipleObjectsReturned" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Users</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="views.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Views.py</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message"><code class="docutils literal notranslate"><span class="pre">Message</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.sender"><code class="docutils literal notranslate"><span class="pre">Message.sender</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.recipient"><code class="docutils literal notranslate"><span class="pre">Message.recipient</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.name"><code class="docutils literal notranslate"><span class="pre">Message.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.email"><code class="docutils literal notranslate"><span class="pre">Message.email</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.subject"><code class="docutils literal notranslate"><span class="pre">Message.subject</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.body"><code class="docutils literal notranslate"><span class="pre">Message.body</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.is_read"><code class="docutils literal notranslate"><span class="pre">Message.is_read</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.created"><code class="docutils literal notranslate"><span class="pre">Message.created</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.id"><code class="docutils literal notranslate"><span class="pre">Message.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.__str__"><code class="docutils literal notranslate"><span class="pre">Message.__str__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Message.DoesNotExist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Message.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Message.MultipleObjectsReturned</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile"><code class="docutils literal notranslate"><span class="pre">Profile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.user"><code class="docutils literal notranslate"><span class="pre">Profile.user</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.name"><code class="docutils literal notranslate"><span class="pre">Profile.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.email"><code class="docutils literal notranslate"><span class="pre">Profile.email</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.username"><code class="docutils literal notranslate"><span class="pre">Profile.username</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.intro"><code class="docutils literal notranslate"><span class="pre">Profile.intro</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.bio"><code class="docutils literal notranslate"><span class="pre">Profile.bio</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.image"><code class="docutils literal notranslate"><span class="pre">Profile.image</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.skills"><code class="docutils literal notranslate"><span class="pre">Profile.skills</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.facebook"><code class="docutils literal notranslate"><span class="pre">Profile.facebook</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.instagram"><code class="docutils literal notranslate"><span class="pre">Profile.instagram</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.created"><code class="docutils literal notranslate"><span class="pre">Profile.created</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.id"><code class="docutils literal notranslate"><span class="pre">Profile.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.__str__"><code class="docutils literal notranslate"><span class="pre">Profile.__str__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Profile.DoesNotExist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Profile.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Profile.MultipleObjectsReturned</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill"><code class="docutils literal notranslate"><span class="pre">Skill</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.name"><code class="docutils literal notranslate"><span class="pre">Skill.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.slug"><code class="docutils literal notranslate"><span class="pre">Skill.slug</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.created"><code class="docutils literal notranslate"><span class="pre">Skill.created</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.id"><code class="docutils literal notranslate"><span class="pre">Skill.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.__str__"><code class="docutils literal notranslate"><span class="pre">Skill.__str__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Skill.DoesNotExist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#users.models.Skill.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Skill.MultipleObjectsReturned</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Maksim Vasiukhnevich, Aliaksei Tutski
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Politechnika Bialostocka 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

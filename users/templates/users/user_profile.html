@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="profile my-md">
+    <div class="container">
+        <div class="layout">
+            <div class="column column--1of3">
+                <div class="card text-center">
+                    <div class="card__body dev">
+                        <img class="avatar avatar--xl" src="{{ profile.image.url }}" />
+                        <h2 class="dev__name">{{ profile.name }}</h2>
+                        <p class="dev__title">{{ profile.intro }}</p>
+                        <ul class="dev__social">
+
+                            {% if profile.facebook %}
+                            <li>
+                                <a title="facebook" href="{{ profile.facebook }}" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            {% endif %}
+
+
+                            {% if profile.instagram %}
+                            <li>
+                                <a title="Twitter" href="{{ profile.instagram }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                        {% if request.user.profile.id != profile.id %}
+                        <a href="{% url 'create-message' profile.username %}" class="btn btn--sub btn--lg">Send message</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="column column--2of3">
+                <div class="devInfo">
+                    <h3 class="devInfo__title">About me</h3>
+                    <div class="settings__table">
+                    <p class="devInfo__about">{{ profile.bio }}</p>
+                    </div>
+                </div>
+                <div class="devInfo">
+                    <h3 class="devInfo__title">Faculty</h3>
+                    <div class="devInfo__skills">
+
+                        {% for skill in main_skills %}
+                        <div class="settings__table">
+                            <h4 class="devSkill__title">{{ skill.name }}</h4>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="devInfo">
+                    <h3 class="devInfo__title">Проекты</h3>
+                    <div class="grid grid--two">
+                        {% for article in profile.article_set.all %}
+                        <div class="column">
+                            <div class="card project">
+                                <a href="{% url 'article' article.slug %}" class="project">
+                                    <img class="project__thumbnail" src="{{ article.image.url }}"
+                                        alt="project thumbnail" />
+                                    <div class="card__body">
+                                        <h3 class="project__title">
+                                        {% if article.is_private %}
+                                        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                                        {% endif %}
+                                        {{ article.title }}
+                                        </h3>
+                                        <p><a class="project__author"
+                                                href="{% url 'user_profile' article.owner %}">Author: {{ article.owner.name }}</a>
+                                        </p>
+                                        <p class="project--rating">
+                                            <span style="font-weight: bold;">Total comments: {{ article.review_count }} </span>
+                                        </p>
+                                        <div class="project__tags">
+
+                                            {% for tag in article.tags.all %}
+                                            <span class="tag tag--pill tag--main">
+                                                <small>{{tag}}</small>
+                                            </span>
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

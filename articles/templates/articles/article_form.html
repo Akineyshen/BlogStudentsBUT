@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+            <a class="backButton" href="{% url 'account' %}"><i class="fa-regular fa-circle-xmark"></i></a>
+            <br>
+
+            <form class="form" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {% for field in form %}
+                <div class="form__field">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {% if field.name == 'description' %}
+                        <span class="question-mark" title="
+                        HTML tags for formatting text:
+                        <b>Bold</b>
+                        <i>Italic</i>
+                        <sup>Superscript</sup>
+                        <sub>Subscript</sub>
+                        <pre>Mono-font</pre>"
+                        >Codes for Text (Hover to see)</span>
+                    {% endif %}
+                    {% if field.name == 'is_private' %}
+                        {{ field }}
+                    {% elif field.name == 'password' %}
+                        <div id="password-field-container" style="display: none;">
+                            {{ field }}
+                        </div>
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                    {% if field.errors %}
+                        <p class="form__error">{{ field.errors|striptags }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                <input class="btn btn--sub btn--lg my-md" type="submit" value="Publish" />
+            </form>
+        </div>
+    </div>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("Document loaded");  // Проверка, что скрипт запускается
+
+        var isPrivateCheckbox = document.getElementById("is-private-checkbox");
+        var passwordFieldContainer = document.getElementById("password-field-container");
+
+        console.log("isPrivateCheckbox:", isPrivateCheckbox);  // Проверка, что элемент найден
+        console.log("passwordFieldContainer:", passwordFieldContainer);  // Проверка, что элемент найден
+
+        function togglePasswordField() {
+            console.log("Checkbox changed, checked:", isPrivateCheckbox.checked);  // Проверка срабатывания функции
+
+            if (isPrivateCheckbox.checked) {
+                passwordFieldContainer.style.display = "block";
+            } else {
+                passwordFieldContainer.style.display = "none";
+            }
+        }
+
+        isPrivateCheckbox.addEventListener("change", togglePasswordField);
+        togglePasswordField();  // Первоначальная проверка для установки корректного состояния при загрузке страницы
+    });
+</script>
+
+{% endblock %}

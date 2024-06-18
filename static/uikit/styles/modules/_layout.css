@@ -1,0 +1,29 @@
+.layout {
+  display: flex;
+  flex-direction: column; /* Меняем на колоночное распределение */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center;
+}
+
+.layout > .column {
+  margin-bottom: 3rem;
+  width: 70%;
+}
+
+.layout > .column.column--1of3 {
+  flex-basis: 30%;
+}
+
+.layout > .column.column--2of3 {
+  flex-basis: 64%;
+}
+
+.layout > .column.column--1of2 {
+  flex-basis: 48%;
+}
+
+@media screen and (max-width: 1080px) {
+  .layout > .column {
+    flex-basis: 100% !important;
+  }
+}
