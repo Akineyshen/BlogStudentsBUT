@@ -1,1 +1,1 @@
-# BlogStudentsBUT
+# WWW.BLOGBUT.PL
