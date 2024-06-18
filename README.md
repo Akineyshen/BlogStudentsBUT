@@ -5,7 +5,6 @@
 <b>Development Environment:</b>
 
 <b>Framework:</b> Django
-
 <b>IDE:</b> PyCharm
 
 <b>Hosting:</b> PythonAnywhere
