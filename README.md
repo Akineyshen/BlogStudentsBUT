@@ -12,21 +12,3 @@
 <b>Domain Provider:</b> Home.pl
 
 <b>Domain:</b> blogbut.pl
-
-  Features:
-
-User authentication and authorization
-
-Article management - Create, update, delete articles - Commenting system
-
-Tagging system for articles
-
-User profile management
-
-CAPTCHA for forms to enhance security
-
-Static and media files handling
-
-Sitemap generation for SEO
-
-PDF generation for articles
