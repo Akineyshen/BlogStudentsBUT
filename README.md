@@ -6,7 +6,6 @@
 
 <b>Framework:</b> Django
 <b>IDE:</b> PyCharm
-
 <b>Hosting:</b> PythonAnywhere
 
 <b>Domain Provider:</b> Home.pl
