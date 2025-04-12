@@ -1,0 +1,37 @@
+{% load static %}
+
+<header class="header">
+    <div class="container container--narrow">
+        <a href="{% url 'articles_main' %}"><span class="header__logo">BLOG<i class="fa-regular fa-pen-to-square"></i>BUT</span></a>
+        <nav class="header__nav">
+            <input type="checkbox" id="responsive-menu" />
+            <label for="responsive-menu" class="toggle-menu">
+                <span>Menu</span>
+                <div class="toggle-menu__lines"></div>
+            </label>
+            <ul class="header__menu">
+                <li class="header__menuItems"><a href="{% url 'about_us' %}">About Us</a></li>
+                <li class="header__menuItems"><a href="{% url 'contact' %}">Contacts</a></li>
+                <li class="header__menuItems"><a href="">Search</a>
+                    <ul class="dropdown-content">
+                        <li><a href="{% url 'articles' %}">Articles</a></li>
+                        <li><a href="{% url 'profiles' %}">Users</a></li>
+                    </ul>
+                </li>
+
+
+
+                {% if request.user.is_authenticated %}
+                <li class="header__menuItems"><a href="{% url 'inbox' %}">Messages ({{unreadCount}})</a></li>
+                <li class="header__menuItems"><a>|</a></li>
+                <li class="header__main"><a href="{% url 'create_article' %}" class="button_main">New Article</a></li>
+                <li class="header__main"><a href="{% url 'account' %}" class="button_main">My Account</a></li>
+                {% else %}
+                <li class="header__menuItems"><a>|</a></li>
+                <li class="header__main"><a href="{% url 'login' %}" class="button_main">Log in</a></li>
+                <li class="header__main"><a href="{% url 'register' %}" class="button_main">Sign up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>

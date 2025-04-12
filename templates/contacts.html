@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="inbox my-xl">
+  <div class="content-box">
+    <h3 class="contact__title"><i class="fa-solid fa-circle-info"></i> Our contacts:</h3>
+    <div class="settings__table_contacts">
+    <div class="contact-info">
+      <div class="admin-photo">
+        <img src="../media/image_site/admin1.jpg" alt="Admin Photo" class="admin-photo__img">
+      </div>
+      <div class="admin-details">
+        <h4 class="admin-name">
+          <a href="{% url 'user_profile' 'Maksim' %}">Maksim Vasiukhnevich</a>
+        </h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/aki.neyshen" target="_blank" class="social-iconi">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/akineyshen" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="settings__table_contacts">
+    <div class="contact-info">
+      <div class="admin-photo">
+        <img src="../media/image_site/admin2.jpg" alt="Admin Photo" class="admin-photo__img">
+      </div>
+      <div class="admin-details">
+        <h4 class="admin-name">
+          <a href="{% url 'user_profile' 'Aliaksei' %}">Aliaksei Tutski</a>
+        </h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/al.tutski/" target="_blank" class="social-iconi">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100086156001986" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    <h3 class="contact__title"><i class="fa-solid fa-location-dot"></i> Our location:</h3>
+    <div class="google_maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.6243982359006!2d23.14484091452964!3d53.11693612434017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ffbdf78ff563d%3A0x1d2b92941871862a!2sWydzia%C5%82%20Informatyki%20Politechniki%20Bia%C5%82ostockej!5e0!3m2!1sru!2spl!4v1716044374300!5m2!1sru!2spl" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+</main>
+
+<!-- Подключение стилей Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<!-- Подключение скрипта Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Координаты офиса
+    const officeLocation = [53.11718403566202, 23.146375137917374];
+
+    // Инициализация карты
+    const map = L.map('map').setView(officeLocation, 15);
+
+    // Подключение тайлов карты от OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+    }).addTo(map);
+
+    // Добавление метки на карту
+    L.marker(officeLocation).addTo(map)
+      .bindPopup('<h6><b>Our office</b></h6><br><h6>Faculty of Computer Science of Bialystok University of Technology</h6>')
+      .openPopup();
+  });
+</script>
+
+{% endblock content %}
