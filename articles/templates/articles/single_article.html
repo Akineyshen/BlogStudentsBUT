@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="singleProject my-md">
+    <div class="container">
+        <div class="layout">
+            <div class="column column--1of3">
+                <h3 class="singleProject__subtitle"><i class="fa-solid fa-layer-group"></i> Category</h3>
+                <div class="singleProject__toolStack">
+                    {% for tag in article.tags.all %}
+                    <a href="{% url 'tag' tag.slug %}" class="tag tag--pill tag--sub tag--lg">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="column column--2of3">
+                <img class="singleProject__preview" src="{{ article.image.url }}" alt="Screenshot of project" />
+                {% if request.user.is_authenticated and request.user.username == article.owner.username %}
+                        <a href="{% url 'account' %}" class="singleProject__developer"><i class="fa-solid fa-user"></i> Author: {{ article.owner.name }}</a>
+                {% else %}
+                        <a href="{% url 'user_profile' article.owner %}" class="singleProject__developer"><i class="fa-solid fa-user"></i> Author: {{ article.owner.name }}</a>
+                {% endif %}
+                <h2 class="singleProject__title">{{ article.title }}</h2>
+                <div class="singleProject__info">
+                    {{ article.description|safe|linebreaks }}
+                    {% if article.source_link %}
+                    <a class="singleProject__liveLink" href="{{ article.source_link }}" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Link to additional material
+                    </a>
+                    <a class="singleProject__liveLinks" href="{% url 'generate_pdf' article.slug %}">
+                        <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
+                    {% else %}
+                    <a class="singleProject__liveLinkss" href="{% url 'generate_pdf' article.slug %}">
+                        <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="comments">
+                    <h3 class="singleProject__subtitle"><i class="fa-regular fa-comment"></i> Comments</h3>
+                    <h4 class="singleProject__developer">Total comments: {{ article.review_count }}</h4>
+                    {% if request.user.is_authenticated %}
+                    <form class="form" action="{% url 'article' article.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div class="form__field">
+                            <label>{{ field.label }}</label>
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                        <input type="hidden" name="comment" value="1">
+                        <input class="btn btn--sub btn--lg" type="submit" value="Add Comment" />
+                    </form>
+                    {% else %}
+                    <a href="{% url 'login' %}?next={{ request.path }}">Log in to leave a review</a>
+                    {% endif %}
+
+                    <div class="commentList">
+                        {% for review in article.review_set.all %}
+                        <div class="comment">
+                            <a href="{% url 'user_profile' review.owner %}">
+                                <img class="avatar avatar--md" src="{{ review.owner.image.url }}" alt="{{ review.owner.name }}'s profile image" />
+                            </a>
+                            <div class="comment__details">
+                                {% if request.user.is_authenticated and request.user.username == review.owner.username %}
+                                    <a href="{% url 'account' %}" class="comment__author">{{ review.owner.name }}</a>
+                                {% else %}
+                                    <a href="{% url 'user_profile' review.owner %}" class="comment__author">{{ review.owner.name }}</a>
+                                {% endif %}
+                                <p class="comment__info">{{ review.body|linebreaksbr }}</p>
+                                {% if request.user.profile == review.owner %}
+                                <a href="{% url 'edit_comment' review.id %}" class="tag tag--pill tag--main settings__btn"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="{% url 'delete_comment' review.id %}" class="tag tag--pill tag--main settings__btn"><i class="fa-solid fa-xmark"></i></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

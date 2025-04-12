@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="projects">
+    <section class="hero-section text-center">
+        <div class="container container--narrow">
+            <div class="hero-section__box">
+                <h2>Search by <span>Article</span></h2>
+            </div>
+
+            <div class="hero-section__search">
+                <form id='searchForm' class="form" action="{% url 'articles' %}" method="get">
+                    <div class="form__field">
+                        <label for="formInput#search">Search by Articles</label>
+                        <input class="input input--text rounded" id="formInput#search" type="text" name="search_query"
+                            placeholder="Search by article Title/Description/Author/Category" value="{{ search_query }}" />
+                    </div>
+
+                    <input class="btn btn--sub btn--lg" type="submit" value="Search" />
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="projectsList">
+        <div class="container">
+            <div class="grid grid--three">
+                {% for article in articles %}
+                <div class="column">
+                    <div class="card project">
+                        <a href="{% url 'article' article.slug %}" class="project">
+                            <img class="project__thumbnail" src="{{ article.image.url }}" alt="скриншот проекта" />
+                            <div class="card__body">
+                                <h3 class="project__title">
+                                    {% if article.is_private %}
+                                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                                    {% endif %}
+                                    {{ article.title }}
+                                </h3>
+                                <p>{% if request.user.is_authenticated and request.user.username == article.owner.username %}
+                                    <a class="project__author" href="{% url 'account' %}">Author: {{ article.owner.name }}</a>
+                                    {% else %}
+                                    <a class="project__author" href="{% url 'user_profile' article.owner %}">Author: {{ article.owner.name }}</a>
+                                    {% endif %}
+                                </p>
+                                <p class="project--rating">
+                                    <span style="font-weight: bold;">Total comments: {{ article.review_count }} </span>
+                                </p>
+                                <div class="project__tags">
+                                    {% for tag in article.tags.all %}
+                                    <a href="{% url 'tag' tag.slug %}" class="tag tag--pill tag--mains">{{tag}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% include 'pagination.html' with queryset=articles custom_range=custom_range %}
+</main>
+
+{% endblock %}

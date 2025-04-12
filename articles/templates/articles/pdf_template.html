@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            line-height: 1.6;
+        }
+        .article-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .article-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .article-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .article-content {
+            font-size: 14px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    {% if image_path %}
+        <div class="article-image">
+            <img src="{{ image_path }}" alt="Article Image">
+        </div>
+    {% endif %}
+    <div class="article-title">{{ article.title }}</div>
+    <div class="article-content">
+        {{ article.description|safe|linebreaksbr }}
+    </div>
+</body>
+</html>
