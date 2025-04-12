@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+/db.sqlite3
+/make.bat
+/Makefile
