@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>users.views &#8212; WWW.BLOGBUT.PL  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/users/views';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">WWW.BLOGBUT.PL  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/models.html">Models.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/views.html">Views.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/forms.html">Forms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../articles/utils.html">Utils.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/index.html">Users</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for users.views</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">get_object_or_404</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Profile</span><span class="p">,</span> <span class="n">Skill</span><span class="p">,</span> <span class="n">Message</span>
+<span class="kn">from</span> <span class="nn">django.dispatch.dispatcher</span> <span class="kn">import</span> <span class="n">receiver</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">login</span><span class="p">,</span> <span class="n">authenticate</span><span class="p">,</span> <span class="n">logout</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.decorators</span> <span class="kn">import</span> <span class="n">login_required</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">messages</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">conf</span>
+<span class="kn">from</span> <span class="nn">.forms</span> <span class="kn">import</span> <span class="n">CustomUserCreationForm</span><span class="p">,</span> <span class="n">ProfileForm</span><span class="p">,</span> <span class="n">SkillForm</span><span class="p">,</span> <span class="n">MessageForm</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">paginateProfiles</span><span class="p">,</span> <span class="n">searchProfiles</span>
+
+
+<div class="viewcode-block" id="loginUser">
+<a class="viewcode-back" href="../../users/index.html#users.views.loginUser">[docs]</a>
+<span class="k">def</span> <span class="nf">loginUser</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the user login process.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered login page or a redirect to the user&#39;s profile or account page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Checks if the user is already authenticated:</span>
+<span class="sd">            a. If authenticated, redirects to the &#39;profile&#39; page.</span>
+<span class="sd">        2. Handles POST requests to log in the user:</span>
+<span class="sd">            a. Retrieves the username and password from the POST data.</span>
+<span class="sd">            b. Tries to get the user with the provided username:</span>
+<span class="sd">                i. If the user does not exist, adds an error message.</span>
+<span class="sd">            c. Authenticates the user with the provided credentials:</span>
+<span class="sd">                i. If the authentication is successful, logs in the user and redirects to the &#39;next&#39; URL if provided, otherwise to the &#39;account&#39; page.</span>
+<span class="sd">                ii. If authentication fails, adds an error message.</span>
+<span class="sd">        3. Renders the login page template for GET requests or if login fails.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - page: The name of the page, used for template rendering logic.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;profile&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;No users&#39;</span><span class="p">)</span>
+
+        <span class="n">user</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">login</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">[</span><span class="s1">&#39;next&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;next&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span> <span class="k">else</span> <span class="s1">&#39;account&#39;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;No invalid username or password&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/login_register.html&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="logoutUser">
+<a class="viewcode-back" href="../../users/index.html#users.views.logoutUser">[docs]</a>
+<span class="k">def</span> <span class="nf">logoutUser</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the user logout process.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object that redirects the user to the login page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Logs out the user by calling Django&#39;s `logout` function.</span>
+<span class="sd">        2. Adds an informational message indicating the user has been logged out.</span>
+<span class="sd">        3. Redirects the user to the &#39;login&#39; page.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; logoutUser(request)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logout</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="n">messages</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Logged out&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="registerUser">
+<a class="viewcode-back" href="../../users/index.html#users.views.registerUser">[docs]</a>
+<span class="k">def</span> <span class="nf">registerUser</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the user registration process.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered registration page or a redirect to the edit account page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Sets the page context to &#39;register&#39;.</span>
+<span class="sd">        2. Initializes an empty CustomUserCreationForm for GET requests.</span>
+<span class="sd">        3. Processes POST requests to register a new user:</span>
+<span class="sd">            a. Populates the CustomUserCreationForm with POST data.</span>
+<span class="sd">            b. If the form is valid:</span>
+<span class="sd">                i. Saves the user instance with a lowercase username.</span>
+<span class="sd">                ii. Displays a success message.</span>
+<span class="sd">                iii. Logs in the newly registered user.</span>
+<span class="sd">                iv. Redirects to the &#39;edit-account&#39; page.</span>
+<span class="sd">            c. If the form is invalid, displays an error message.</span>
+<span class="sd">        4. Renders the registration page template with the form context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - page: The name of the page, used for template rendering logic.</span>
+<span class="sd">        - form: The CustomUserCreationForm instance for user registration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="s1">&#39;register&#39;</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">CustomUserCreationForm</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">CustomUserCreationForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Account created!&#39;</span><span class="p">)</span>
+
+            <span class="n">login</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;edit-account&#39;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Something went&#39;</span><span class="p">)</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;page&#39;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span> <span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/login_register.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="profiles">
+<a class="viewcode-back" href="../../users/index.html#users.views.profiles">[docs]</a>
+<span class="k">def</span> <span class="nf">profiles</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying a list of user profiles with search and pagination functionality.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered profiles template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves profiles based on a search query using the searchProfiles function.</span>
+<span class="sd">        2. Paginates the retrieved profiles using the paginateProfiles function, displaying 6 profiles per page.</span>
+<span class="sd">        3. Prepares the context with the profiles, search query, and custom pagination range.</span>
+<span class="sd">        4. Renders the profiles template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - profiles: The paginated list of profiles matching the search query.</span>
+<span class="sd">        - search_query: The search query string used for filtering profiles.</span>
+<span class="sd">        - custom_range: The range of page numbers for pagination controls.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; profiles(request)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profiles</span><span class="p">,</span> <span class="n">search_query</span> <span class="o">=</span> <span class="n">searchProfiles</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="n">custom_range</span><span class="p">,</span> <span class="n">profiles</span> <span class="o">=</span> <span class="n">paginateProfiles</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">profiles</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;profiles&#39;</span><span class="p">:</span> <span class="n">profiles</span><span class="p">,</span> <span class="s1">&#39;search_query&#39;</span><span class="p">:</span> <span class="n">search_query</span><span class="p">,</span> <span class="s1">&#39;custom_range&#39;</span><span class="p">:</span> <span class="n">custom_range</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/profiles.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+
+<div class="viewcode-block" id="userProfile">
+<a class="viewcode-back" href="../../users/index.html#users.views.userProfile">[docs]</a>
+<span class="k">def</span> <span class="nf">userProfile</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying a user&#39;s profile, including their main and extra skills.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        username (str): The username of the profile to be displayed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered user profile template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile associated with the provided username.</span>
+<span class="sd">        2. Retrieves the main skills (first 10) and extra skills (all skills starting from the 3rd) of the profile.</span>
+<span class="sd">        3. Prepares the context with the profile, main skills, and extra skills.</span>
+<span class="sd">        4. Renders the user profile template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - profile: The Profile instance of the user.</span>
+<span class="sd">        - main_skills: A list of the first 10 skills of the user.</span>
+<span class="sd">        - extra_skills: A list of the user&#39;s skills starting from the 3rd skill.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; userProfile(request, &#39;john_doe&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+
+    <span class="n">main_skills</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">all</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="n">extra_skills</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">all</span><span class="p">()[</span><span class="mi">2</span><span class="p">:]</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="n">profile</span><span class="p">,</span> <span class="s1">&#39;main_skills&#39;</span><span class="p">:</span> <span class="n">main_skills</span><span class="p">,</span>
+               <span class="s2">&quot;extra_skills&quot;</span><span class="p">:</span> <span class="n">extra_skills</span><span class="p">,}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/user_profile.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="profiles_by_skill">
+<a class="viewcode-back" href="../../users/index.html#users.views.profiles_by_skill">[docs]</a>
+<span class="k">def</span> <span class="nf">profiles_by_skill</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">skill_slug</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying profiles filtered by a specific faculty.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        skill_slug (str): The slug identifier for the faculty to filter profiles by.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered profiles template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the faculty instance based on the provided slug or returns a 404 if not found.</span>
+<span class="sd">        2. Filters profiles that have the specified faculty.</span>
+<span class="sd">        3. Prepares the context with the filtered profiles.</span>
+<span class="sd">        4. Renders the profiles template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - profiles: The list of profiles that have the specified skill.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; profiles_by_skill(request, &#39;Computer Sience&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">skill</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Skill</span><span class="p">,</span> <span class="n">slug</span><span class="o">=</span><span class="n">skill_slug</span><span class="p">)</span>
+    <span class="n">profiles</span> <span class="o">=</span> <span class="n">Profile</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">skills</span><span class="o">=</span><span class="n">skill</span><span class="p">)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;profiles&#39;</span><span class="p">:</span> <span class="n">profiles</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;users/profiles.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="userAccount">
+<a class="viewcode-back" href="../../users/index.html#users.views.userAccount">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">userAccount</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying the logged-in user&#39;s account details.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered user account template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Retrieves all skills associated with the user&#39;s profile.</span>
+<span class="sd">        3. Retrieves all articles associated with the user&#39;s profile.</span>
+<span class="sd">        4. Prepares the context with the profile, skills, and articles.</span>
+<span class="sd">        5. Renders the user account template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - profile: The Profile instance of the logged-in user.</span>
+<span class="sd">        - skills: A queryset of skills associated with the user&#39;s profile.</span>
+<span class="sd">        - articles: A queryset of articles associated with the user&#39;s profile.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; userAccount(request)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+
+    <span class="n">skills</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">articles</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">article_set</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="n">profile</span><span class="p">,</span> <span class="s1">&#39;skills&#39;</span><span class="p">:</span> <span class="n">skills</span><span class="p">,</span> <span class="s1">&#39;articles&#39;</span><span class="p">:</span> <span class="n">articles</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/account.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="editAccount">
+<a class="viewcode-back" href="../../users/index.html#users.views.editAccount">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">editAccount</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for editing the logged-in user&#39;s account details.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered profile form template or a redirect to the user&#39;s account page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Initializes the ProfileForm with the user&#39;s profile instance for GET requests.</span>
+<span class="sd">        3. Processes POST requests to update the user&#39;s profile:</span>
+<span class="sd">            a. Populates the ProfileForm with POST data and files.</span>
+<span class="sd">            b. If the form is valid, saves the updated profile and redirects to the &#39;account&#39; page.</span>
+<span class="sd">        4. Prepares the context with the form.</span>
+<span class="sd">        5. Renders the profile form template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - form: The ProfileForm instance for editing the user&#39;s profile.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; editAccount(request)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ProfileForm</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">profile</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">ProfileForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">FILES</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">profile</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;account&#39;</span><span class="p">)</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/profile_form.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="createSkill">
+<a class="viewcode-back" href="../../users/index.html#users.views.createSkill">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">createSkill</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Only for Admin</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">SkillForm</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">SkillForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">skill</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;skill&#39;</span><span class="p">]</span>
+            <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">skill</span><span class="p">)</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Faculty successfully added&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;account&#39;</span><span class="p">)</span>
+
+    <span class="n">skills</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">,</span> <span class="s1">&#39;skills&#39;</span><span class="p">:</span> <span class="n">skills</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/skill_form.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="updateSkill">
+<a class="viewcode-back" href="../../users/index.html#users.views.updateSkill">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">updateSkill</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">skill_slug</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for updating an existing faculty in the logged-in user&#39;s profile.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        skill_slug (str): The slug identifier for the faculty to be updated.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered faculty form template or a redirect to the user&#39;s account page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Retrieves the current faculty instance based on the provided slug or returns a 404 if not found.</span>
+<span class="sd">        3. Processes POST requests to update the skill:</span>
+<span class="sd">            a. Populates the SkillForm with POST data.</span>
+<span class="sd">            b. If the form is valid, replaces the current skill with the new skill in the user&#39;s profile and redirects to the &#39;account&#39; page with a success message.</span>
+<span class="sd">        4. Initializes the SkillForm with the current skill for GET requests.</span>
+<span class="sd">        5. Prepares the context with the form and the current skill.</span>
+<span class="sd">        6. Renders the skill form template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - form: The SkillForm instance for updating the skill.</span>
+<span class="sd">        - current_skill: The current Faculty instance being updated.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; updateSkill(request, &#39;Architecture&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">current_skill</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Skill</span><span class="p">,</span> <span class="n">slug</span><span class="o">=</span><span class="n">skill_slug</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">SkillForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">new_skill</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;skill&#39;</span><span class="p">]</span>
+            <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">current_skill</span><span class="p">)</span>
+            <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_skill</span><span class="p">)</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Faculty successfully updated&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;account&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">SkillForm</span><span class="p">(</span><span class="n">initial</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;skill&#39;</span><span class="p">:</span> <span class="n">current_skill</span><span class="p">})</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">,</span> <span class="s1">&#39;current_skill&#39;</span><span class="p">:</span> <span class="n">current_skill</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/skill_form.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+
+<div class="viewcode-block" id="deleteSkill">
+<a class="viewcode-back" href="../../users/index.html#users.views.deleteSkill">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">deleteSkill</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">skill_slug</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for deleting an existing faculty from the logged-in user&#39;s profile.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        skill_slug (str): The slug identifier for the faculty to be deleted.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered delete confirmation template or a redirect to the user&#39;s account page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Retrieves the faculty instance from the user&#39;s profile based on the provided slug.</span>
+<span class="sd">        3. Processes POST requests to delete the skill:</span>
+<span class="sd">            a. Removes the faculty from the user&#39;s profile.</span>
+<span class="sd">            b. Redirects to the &#39;account&#39; page with a success message.</span>
+<span class="sd">        4. Prepares the context with the skill to be deleted.</span>
+<span class="sd">        5. Renders the delete confirmation template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - object: The Faculty instance to be deleted.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; deleteSkill(request, &#39;Computer Sience&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">skill</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="n">skill_slug</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">profile</span><span class="o">.</span><span class="n">skills</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">skill</span><span class="p">)</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Faculty successfully deleted&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;account&#39;</span><span class="p">)</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;object&#39;</span><span class="p">:</span> <span class="n">skill</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;delete_template.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="inbox">
+<a class="viewcode-back" href="../../users/index.html#users.views.inbox">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">inbox</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying the logged-in user&#39;s inbox with message requests.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered inbox template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Retrieves all message requests associated with the user&#39;s profile.</span>
+<span class="sd">        3. Counts the number of unread message requests.</span>
+<span class="sd">        4. Prepares the context with the message requests and the count of unread messages.</span>
+<span class="sd">        5. Renders the inbox template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - messageRequests: A queryset of all message requests associated with the user&#39;s profile.</span>
+<span class="sd">        - unreadCount: The count of unread message requests.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; inbox(request)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">messageRequests</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">unreadCount</span> <span class="o">=</span> <span class="n">messageRequests</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">is_read</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;messageRequests&#39;</span><span class="p">:</span> <span class="n">messageRequests</span><span class="p">,</span> <span class="s1">&#39;unreadCount&#39;</span><span class="p">:</span> <span class="n">unreadCount</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/inbox.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="viewMessage">
+<a class="viewcode-back" href="../../users/index.html#users.views.viewMessage">[docs]</a>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">viewMessage</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying a single message and marking it as read.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        pk (int): The primary key of the message to be viewed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered message template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the logged-in user.</span>
+<span class="sd">        2. Retrieves the message instance associated with the user&#39;s profile and the provided primary key.</span>
+<span class="sd">        3. If the message is unread, marks it as read and saves the change.</span>
+<span class="sd">        4. Prepares the context with the message.</span>
+<span class="sd">        5. Renders the message template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - message: The Message instance to be viewed.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; viewMessage(request, 1)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">is_read</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">is_read</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="n">message</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/message.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="createMessage">
+<a class="viewcode-back" href="../../users/index.html#users.views.createMessage">[docs]</a>
+<span class="k">def</span> <span class="nf">createMessage</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the creation and sending of a message to a specified user.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+<span class="sd">        username (str): The username of the recipient of the message.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered message form template or a redirect to the recipient&#39;s profile page.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Retrieves the profile of the recipient based on the provided username.</span>
+<span class="sd">        2. Initializes an empty MessageForm for GET requests.</span>
+<span class="sd">        3. Tries to retrieve the profile of the sender (logged-in user):</span>
+<span class="sd">            a. If the user is not logged in, sets the sender to None.</span>
+<span class="sd">        4. Processes POST requests to create and send a message:</span>
+<span class="sd">            a. Populates the MessageForm with POST data.</span>
+<span class="sd">            b. If the form is valid, sets the sender, recipient, name, and email fields of the message and saves it.</span>
+<span class="sd">            c. Displays a success message and redirects to the recipient&#39;s profile page.</span>
+<span class="sd">        5. Prepares the context with the recipient&#39;s profile and the form.</span>
+<span class="sd">        6. Renders the message form template with the context.</span>
+
+<span class="sd">    The context for rendering the template includes:</span>
+<span class="sd">        - recipient: The Profile instance of the message recipient.</span>
+<span class="sd">        - form: The MessageForm instance for creating the message.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; createMessage(request, &#39;john_doe&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">recipient</span> <span class="o">=</span> <span class="n">Profile</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">MessageForm</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">sender</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">profile</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">sender</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">MessageForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">sender</span> <span class="o">=</span> <span class="n">sender</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">recipient</span> <span class="o">=</span> <span class="n">recipient</span>
+
+            <span class="k">if</span> <span class="n">sender</span><span class="p">:</span>
+                <span class="n">message</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">sender</span><span class="o">.</span><span class="n">name</span>
+                <span class="n">message</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">sender</span><span class="o">.</span><span class="n">email</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;Your message was successfully sent!&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;user_profile&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="n">recipient</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;recipient&#39;</span><span class="p">:</span> <span class="n">recipient</span><span class="p">,</span> <span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;users/message_form.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="contact">
+<a class="viewcode-back" href="../../users/index.html#users.views.contact">[docs]</a>
+<span class="k">def</span> <span class="nf">contact</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying the contact page.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered contact page template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Renders the contact page template.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; contact(request)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;contacts.html&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="about_us">
+<a class="viewcode-back" href="../../users/index.html#users.views.about_us">[docs]</a>
+<span class="k">def</span> <span class="nf">about_us</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the view for displaying the &quot;About Us&quot; page.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (HttpRequest): The HTTP request object containing metadata about the request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HttpResponse: The HTTP response object with the rendered &quot;About Us&quot; page template.</span>
+
+<span class="sd">    This view function performs the following tasks:</span>
+<span class="sd">        1. Renders the &quot;About Us&quot; page template.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; about_us(request)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;about_us.html&#39;</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Maksim Vasiukhnevich, Aliaksei Tutski
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Politechnika Bialostocka 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
