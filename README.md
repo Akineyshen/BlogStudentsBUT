@@ -36,13 +36,9 @@
    ```bash
     cd BlogStudentsBUT
     ```
-3. Create and activate virtual environment:
+3. Create virtual environment:
     ```bash
     python -m venv .venv
-   # Windows
-   .venv\Scripts\activate
-   # Linux/macOS
-   source .venv/bin/activate
     ```
 4. Install dependencies:
     ```bash
@@ -90,7 +86,7 @@
    ```
 3. Open the generated documentation in a web browser:
    ```bash
-    open build/index.html
+    open build/html/index.html
     ```
    
 ## Screenshots
