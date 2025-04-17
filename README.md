@@ -1,9 +1,8 @@
 # Blog Students BUT
 ![Language](https://img.shields.io/badge/Language-Python-brightgreen?style=for-the-badge&logo=Python&color=3776ab&labelColor=FCFCFC)
-![Framework](https://img.shields.io/badge/Framework-Django-brightgreen?style=for-the-badge&logo=Django&logoColor=092E20&color=092E20&labelColor=FCFCFC)
+![Framework](https://img.shields.io/badge/Framework-Django-brightgreen?style=for-the-badge&logo=Django&logoColor=3776ab&color=3776ab&labelColor=FCFCFC)
 ![Size](https://img.shields.io/github/repo-size/Akineyshen/BlogStudentsBUT?label=Size&style=for-the-badge&color=3776ab&labelColor=FCFCFC)
 ![Last Commit](https://img.shields.io/github/last-commit/Akineyshen/BlogStudentsBUT?label=Last%20Commit&style=for-the-badge&color=3776ab&labelColor=FCFCFC)
-![Progress](https://img.shields.io/badge/Progress-Completed-brightgreen?style=for-the-badge&color=2FBE7C&labelColor=FCFCFC)
 
 ## Features
 ### Core Functionality
