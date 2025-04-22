@@ -6,7 +6,7 @@
 
 ## Features
 ### Core Functionality
-- **User Authentication**: Register, login, and manage user profiles  
+- **User Authentication**: Register, login and manage user profiles  
 - **Blog Posts**: Create, edit, view and delete blog posts  
 - **Categories**: Organize posts by categories  
 - **Comments**: Interactive commenting system on blog posts
